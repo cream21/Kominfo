@@ -50,10 +50,10 @@ class KwitansiResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('pejabat.nama_lengkap'),
-                Tables\Columns\TextColumn::make('pejabat.nama_lengkap'),
-                Tables\Columns\TextColumn::make('pejabat.nama_lengkap'),
-                Tables\Columns\TextColumn::make('uraian_belanja'),
+                Tables\Columns\TextColumn::make('kadis.nama_lengkap'),
+                Tables\Columns\TextColumn::make('pa_pptk.nama_lengkap'),
+                Tables\Columns\TextColumn::make('bendahara.nama_lengkap'),
+                Tables\Columns\TextColumn::make('uraian_pembayaran'),
                 Tables\Columns\TextColumn::make('uang'),
                 Tables\Columns\TextColumn::make('belanja.uraian_belanja'),
                 Tables\Columns\TextColumn::make('subkegiatan.nama_sub_kegiatan'),
