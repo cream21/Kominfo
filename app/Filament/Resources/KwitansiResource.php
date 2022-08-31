@@ -84,7 +84,7 @@ class KwitansiResource extends Resource
                     $kwitansi = $record->toArray();
                     $datas = array_merge(array('terbilang'=>self::terbilang($record->uang)),$kwitansi, $pa_pptk, $kadis, $bendahara,  $subkegiatan, $kegiatan, $program, $belanja);
                     // dd($record, $kegiatan,  $datas);
-                    $pdfContent = Pdf::loadView('pdf.pdf', $datas)->setPaper('A5', 'landscape')->output();
+                    $pdfContent = Pdf::loadView('pdf.pdf', $datas)->setPaper('A4', 'portrait')->output();
                     return response()->streamDownload(fn () => print($pdfContent), "filename.pdf");
                 }),
             ])

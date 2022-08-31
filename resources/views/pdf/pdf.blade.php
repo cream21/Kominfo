@@ -3,15 +3,6 @@
 <head>
     <title>Document</title>
     <style>
-        body {
-            width: 148mm;
-            height: 210mm;
-            margin-top: -4mm;
-            margin-left: 10mm;
-            margin-right: 10mm;
-            margin-bottom: 3mm;
-
-        }
 
         textarea {
             border-bottom: none;
@@ -56,6 +47,16 @@
             float: left;
             margin-left: -35px;
         }
+        .item3 {
+            width: 10%;
+            float: left;
+            margin-left: -35px;
+        }
+        .item4 {
+            width: 75%;
+            float: left;
+            margin-left: -35px;
+        }
 
         .item2 {
             width: 50%;
@@ -67,10 +68,10 @@
 
 <body>
     <div style="text-align: center">
-        <h4>PEMERINTAH KOTA MATARAM</h4>
+        <h3>PEMERINTAH KOTA MATARAM</h3>
     </div>
-    <div class="grid" style="width: 85%">
-        <div class="item1">
+    <div class="grid" style="width: 69%">
+        <div class="item1" style="width: 120px">
             <ul style="list-style-type: none">
                 <li>No. BKU</li>
                 <li>Tanggal</li>
@@ -87,7 +88,7 @@
             </ul>
         </div>
         <div class="item1">
-            <ul style="list-style-type: none" width="100px">
+            <ul style="list-style-type: none; width:120px">
                 <li>Tahun Anggaran</li>
                 <li>PA/PPTK</li>
                 <li>Program</li>
@@ -106,7 +107,7 @@
         </div>
     </div>
     <div>
-        <div style="text-align: left; margin-top: 80px">
+        <div style="text-align: left; margin-top: 90px; margin-left: 50px">
             <h3>K W I T A N S I</h3>
         </div>
         <div class="grid">
@@ -114,14 +115,21 @@
                 <ul style="list-style-type: none">
                     <li>Telah terima dari</li>
                     <li>Banyaknya Uang</li>
-                    <li style="text-align: justify">Untuk Pembayaran</li>
+                    <li>Untuk Pembayaran</li>
                 </ul>
             </div>
-            <div style="float: left; width: 100%;">
-                <ul style="list-style-type: none">
-                    <li>:&nbsp; Kepala Dinas Komunikasi dan Informatika Kota Mataram</li>
-                    <li>:&nbsp; {{ Ucfirst($terbilang) }} rupiah</li>
-                    <li>:&nbsp; <p style="margin-top: -13px">
+            <div class="item3">
+                <ul style="list-style-type: none" >
+                    <li>:</li>
+                    <li>:</li>
+                    <li>:</li>
+                </ul>
+            </div>
+            <div style="float: left" class="item4">
+                <ul style="list-style-type: none"  >
+                    <li>Kepala Dinas Komunikasi dan Informatika Kota Mataram</li>
+                    <li>{{ Ucfirst($terbilang) }} rupiah</li>
+                    <li>&nbsp; <p style="margin-top: -13px">
                             {{ $uraian_pembayaran }}
                         </p>
                     </li>
@@ -132,17 +140,14 @@
     <br />
 
 
-    <table width="100%" style="margin-top: 40px">
+    <table width="100%" style="margin-top: 80px">
         <tr height=" 100px">
             <td>
-                <h2><i>Terbilang Rp.{{ number_format($uang,2,",",".") }} </i>
+                <h2><i>Terbilang Rp.{{ number_format($uang,0,".") }} </i>
                     <div class="garis_horizontal"></div>
                 </h2>
             </td>
-            <td>
-                <center style="margin-top: 50px">Mataram,........................................... <br>
-                    Yang Menerima Uang</center>
-            </td>
+            
 
         </tr>
     </table>
@@ -154,12 +159,13 @@
                     Kota Mataram</center>
             </td>
 
-            <td width="140px">
+            <td width="280px">
                 <center>Lunas Di Bayar : <br>
                     Bendahara Pengeluaran</center>
             </td>
 
-            <td></td>
+            <td><center >Mataram,........................................... <br>
+                Yang Menerima Uang</center></td>
 
         </tr>
     </table>
@@ -168,7 +174,8 @@
             <td><br></td>
         </tr>
     </table>
-
+    <br>
+<br>
     <table width="100%">
         <tr>
             <td width="205px">
