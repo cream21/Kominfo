@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('pejabats', function (Blueprint $table) {
             $table->id();
             $table->string('nama_lengkap');
-            $table->integer('nip');
+            $table->string('nip');
             $table->foreignId('jabatan_id')->constrained();
             $table->text('alamat');
             $table->foreignId('opd_id')->constrained();

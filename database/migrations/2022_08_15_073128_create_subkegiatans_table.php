@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('subkegiatans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('kegiatan_id')->constrained();
-            $table->integer('kode_rekening');
+            $table->string('kode_rekening');
             $table->string('nama_sub_kegiatan');
             $table->timestamps();
         });

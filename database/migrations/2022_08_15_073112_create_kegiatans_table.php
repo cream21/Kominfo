@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('kegiatans', function (Blueprint $table) {
             $table->id('id');
             $table->foreignId('program_id')->constrained();
-            $table->integer('kode_rekening');
+            $table->string('kode_rekening');
             $table->string('nama_kegiatan');
             $table->timestamps();
         });

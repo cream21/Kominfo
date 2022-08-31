@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->id('id');
-            $table->integer('kode_rekening');
+            $table->string('kode_rekening');
             $table->string('nama_program');
             $table->timestamps();
         });

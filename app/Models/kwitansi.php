@@ -32,4 +32,8 @@ class kwitansi extends Model
     {
         return $this->belongsTo(subkegiatan::class);
     }
+    public function pejabat()
+    {
+        return $this->belongsTo(pejabat::class);
+    }
 }

@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('belanjas', function (Blueprint $table) {
             $table->id();
-            $table->integer('kode_rekening');
+            $table->string('kode_rekening');
             $table->text('uraian_belanja');
             $table->timestamps();
         });
